@@ -1,0 +1,43 @@
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    text-align: center;
+    color: #fff;
+}
+.side_link
+{
+    list-style-type: none;
+    background: #c10c0c;
+    text-decoration: none;
+    display:block;
+    padding-top: 15%;
+    padding-bottom: 12%;
+    font-size: 16px;
+    margin-left: -10%;
+    position: fixed;
+    height: 100%;
+    color: #fff;
+
+}
+a{
+    color: #fff;
+}
+
+h4{
+    float:left;
+   color: #fff;
+    font-family:Arial, Helvetica, sans-serif;
+    margin-top: -40%;
+    margin-left: 14%;
+}
+h2{
+    color:blue;
+    font-family:Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+.welcome{
+
+    text-align: center;
+    padding-top: 0%;
+
+}

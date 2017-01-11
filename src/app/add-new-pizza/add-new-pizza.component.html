@@ -1,0 +1,54 @@
+<form class="form-horizontal form_style" name="form" (ngSubmit)="f.form.valid && add_pizza(model)" #f="ngForm" novalidate>
+
+
+	<div class="row">
+
+		<div class="col-md-10 form_elements">
+			<div class="row">
+				<div class="col-md-6">
+					<h3>Add Pizza</h3>
+				</div>
+			</div>
+			<div class="form-group" [ngClass]="{ 'has-error': f.submitted && !pizzaName.valid || f.submitted && !pizzaType.valid || f.submitted && !pizzaSize.valid || f.submitted && !pizzaPrice.valid}">
+				<input type="text" name="name" id="pizzaName" value="" placeholder="Pizza name" class="form-control" [(ngModel)]="model.pizzaName"
+					#pizzaName="ngModel" required><br />
+
+				<div *ngIf="f.submitted && !pizzaName.valid" class="help-block">Name is required</div>
+			</div>
+			<div class="form-group">
+				<label>Type</label>
+				<input type="radio" id="radio1" #pizzaType="ngModel" name="pizzaType" value="veg" [(ngModel)]="model.pizzaType" required>Veg
+				<input type="radio" id="radio1" #pizzaType="ngModel" name="pizzaType" value="non-veg" [(ngModel)]="model.pizzaType" required>Non-Veg<br
+				/>
+
+				<div *ngIf="f.submitted && !pizzaType.valid" class="help-block">Type is required</div>
+			</div>
+
+			<div class="form-group">
+				<label>Size</label>
+				<input type="radio" id="sizes" #pizzaSize="ngModel" name="pizzaSize" value="small" [(ngModel)]="model.pizzaSize" required>Small
+				<input type="radio" id="sizes" #pizzaSize="ngModel" name="pizzaSize" value="medium" [(ngModel)]="model.pizzaSize" required>Medium
+				<input type="radio" id="sizes" #pizzaSize="ngModel" name="pizzaSize" value="large" [(ngModel)]="model.pizzaSize" required>Large
+
+				<div *ngIf="f.submitted && !pizzaSize.valid" class="help-block">Size is required</div>
+			</div>
+
+			<div class="form-group">
+				<input type="text" id="price" name="Price" #pizzaPrice="ngModel" placeholder="Price" value="" class="form-control" [(ngModel)]="model.Price"
+					required><br />
+				<div *ngIf="f.submitted && !pizzaPrice.valid" class="help-block">price is required</div>
+			</div>
+
+			<div class="row">
+				<div class="rowcol-sm-offset-2 col-sm-10">
+					<br />
+					<button type="submit" class="btn btn-primary" id="add">Add</button>
+					<button type="reset" class="btn btn-warning" id="clear">Clear</button>
+
+				</div>
+			</div>
+
+		</div>
+
+	</div>
+</form>

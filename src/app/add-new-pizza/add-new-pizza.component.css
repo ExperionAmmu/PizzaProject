@@ -1,0 +1,30 @@
+.form_style{
+    margin-left: 31%;   
+}
+.form_elements{
+
+    text-align: left;
+    border-radius: 1px solid;
+    box-sizing: border-box;
+    border: 3px solid #ccc;
+    width: 100%;
+    padding: 50px 25px;
+    margin: 8px 0;
+    box-shadow: 5px 5px 5px #888888;
+}
+h3{
+    color:blue;
+    text-align: center;
+}
+#radio1{
+     text-align: left;
+}
+#add{
+    height: 40px;
+     width: 100px;
+}
+#clear{
+height: 40px;
+     width: 100px;
+}
+
